@@ -1,6 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include "main.h"
 
-void print_buffer(char buffer[], int *buff_ind);
 /**
  * _printf - Printf function
  * @format: format.
@@ -8,3 +10,20 @@ void print_buffer(char buffer[], int *buff_ind);
  */
 
 int _printf(const char *format, ...)
+{
+        int length;
+        int i=0;
+
+        if (format == NULL)
+                return (-1);
+
+        while (format && format[i])
+        {
+                if (format[i] == '\0')
+                        return (-1);
+                length+=write(1,&format[i],1);
+                i++;
+        }
+
+        return length;
+}
