@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 
         while (format && format[i])
         {
-                if (format[i] == NULL)
+                if (format[i] == '\0')
                         return (-1);
                 length+=write(1,&format[i],1);
                 i++;
