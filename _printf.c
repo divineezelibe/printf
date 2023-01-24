@@ -12,14 +12,14 @@
 
 int _printf(const char *format, ...)
 {
-        va_list args;
+        //va_list args;
         int length;
         int i=0;
 
         if (format == NULL)
                 return (-1);
 
-        va_start(args, format);
+        //va_start(args, format);
 
         while (format && format[i])
         {
@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
                 i++;
         }
 
-        va_end(args);
+        //va_end(args);
 
         return (length);
 }
