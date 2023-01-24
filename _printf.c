@@ -14,17 +14,14 @@ int _printf(const char *format, ...)
         va_list args;
         int length=0;
         int i=0;
-
-        if (format == NULL)
-                return (-1);
-
+        
         va_start(args, format);
 
         while (format && format[i])
         {
                 if (format[i] == '\0')
                         return (-1);
-                length+=write(1,&format[i],1);
+                length+=write(1, &format[i], 1);
                 i++;
         }
 
