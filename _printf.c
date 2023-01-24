@@ -5,9 +5,8 @@
 
 /**
  * _printf - Printf function
- * @format: format.
- * @args: ...
- * Return: Printed chars.
+ * @format: format
+ * Return: Printed chars
  */
 
 int _printf(const char *format, ...)
